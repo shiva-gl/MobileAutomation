@@ -65,4 +65,4 @@ mvn clean test -P regression
 Find in target folder with AutomationReport.html, FailedScreenShots and Automation ModuleWise Reports
 
 #### Dockerized test:
-Test runs only on read android devices
+Test runs only on real android devices
