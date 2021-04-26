@@ -1,0 +1,18 @@
+appium-android:
+  image: appium/appium
+  privileged: true
+  container_name: appium
+  volumes:
+    - /dev/bus/usb:/dev/bus/usb
+    - ./Android.SauceLabs.Mobile.Sample.app.2.7.1.apk:/opt/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+  ports:
+    - 4724:4724
+
+java-maven:
+  image: srinivasansekar/javamvn
+  container_name: javamvn
+  volumes:
+    - ./:/home
+  command: mvn test -P regression
+  links:
+    - appium-android:localhost

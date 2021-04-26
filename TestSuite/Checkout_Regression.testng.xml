@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Checkout">
+	<listeners>
+		<listener class-name="com.intigral.listeners.ScreenshotListener" />
+	</listeners>
+	<test name="Add and delete product items - checkout flow">
+		<classes>
+			<class name="com.intigral.checkout.Chekout_Regression" />
+		</classes>
+	</test>
+</suite> 
